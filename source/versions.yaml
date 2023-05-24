@@ -14,3 +14,4 @@ calico_node: v3.18.2
 geo_failover_manager: '1.8'
 minio: RELEASE.2022-09-22T18-57-27Z
 backup_operator: '1.18'
+stunnel: '1.13'
