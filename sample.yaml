@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appfw-network-operator
+  namespace: appfw
+spec:
+  template:     
+    spec:
+      containers:
+        - name: network-operator
+          image: {{.registry}}/edge/app-network-operator:{{.app_network_operator}}
+        - name: edge_stunnel
+          image: "{{ .registry }}/edge/edge_stunnel:{{ .stunnel }}"
