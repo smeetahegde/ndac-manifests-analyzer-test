@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: net-oper-config
+  namespace: default
+data:
+  config.yaml: |
+    birdClient: "registry.dac.nokia.com/edge/birdclient:1.1"
+    bird: registry.dac.nokia.com/edge/2.0.5-build12
