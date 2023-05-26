@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minio
+  namespace: appfw
+spec:
+  template:    
+    spec:
+      initContainers:
+        - image: registry.dac.nokia.com/public/busybox:1.34.1
+          name: minio-init                  
+      containers:
+        - image: registry.dac.nokia.com/public/minio:RELEASE.2022-09-22T18-57-27Z
+          name: minio
+        - image: registry.dac.nokia.com/public/minio:RELEASE
+          name: minio-test
