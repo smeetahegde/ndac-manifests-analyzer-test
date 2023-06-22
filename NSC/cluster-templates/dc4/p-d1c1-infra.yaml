@@ -1,0 +1,28 @@
+global:
+  dc_name: dc4
+  cluster: c1
+  #mgmt_domain: 
+  domain: west.us.dac.nokia.com
+  giturl: gitlabe1.ext.net.nokia.com
+  proxy: ""
+  bgp_cluster_ip: "192.168.14.101"
+  bgp:
+    peers:
+      - name: peer-1
+        address: "192.168.3.2"
+        peer_asn: "4210001101"
+        local_asn: "4210001101"
+      - name: peer-2
+        address: "192.168.3.3"
+        peer_asn: "4210001101"
+        local_asn: "4210001101"
+    service_address_pool: "192.168.14.0/24"
+import:
+  - cluster-templates/dc4/common.yaml
+include:
+  - name: vepro-secrets
+    path: daas-management/vepro-secrets
+  - name: metallb
+    path: load-balancer/metallb
+#  - name: jenkins-role
+#    path: daas-management/auth/jenkins
