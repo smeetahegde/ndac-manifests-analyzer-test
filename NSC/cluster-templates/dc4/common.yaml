@@ -1,0 +1,12 @@
+registry: registry.dac.nokia.com
+pullsecret: eudacsecret
+dac_pullsecret: eudacsecret
+elastic_username: elastic
+elastic_password: NscElastic1966!(^^
+proxy: http://192.168.3.10:8089
+proxy_address: 192.168.3.10
+proxy_port: 8089
+prod_cluster: true
+captchakey: 6LdDw08cAAAAANNlOAdO5UTY0q37Ciz08Aqb9ac1
+captchasecretkey: 6LdDw08cAAAAAKDwZLWI3WU3YChTFRNOVCPvtytB
+k8s_major_version: v14
