@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: haproxy-conf
+  namespace: ingress-controller
+data:
+  max-connections: "50000"
+  stats-auth: daaas:daaas123
+  #syslog-endpoint: fluentd-syslog.kube-system:5140
+  timeout-client: 5m
+  timeout-connect: 5m
+  timeout-server: 5m

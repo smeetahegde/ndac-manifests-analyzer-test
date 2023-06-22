@@ -1,0 +1,14 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: haproxy-ingress
+  namespace: ingress-controller
+spec:
+  rules:
+  - host: haproxy.{{ .domain }}
+    http:
+      paths:
+      - backend:
+          serviceName: haproxy-status
+          servicePort: 1936
