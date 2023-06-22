@@ -1,0 +1,16 @@
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  labels:
+    app: postgres
+  name: postgres
+  namespace: daas
+spec:
+  template:
+    spec:
+      containers:
+      - env:
+        image: crunchydata/crunchy-postgres:centos7-10.4-2.0.0
+        name: statefulset
+
