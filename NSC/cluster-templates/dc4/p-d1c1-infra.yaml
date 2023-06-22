@@ -19,10 +19,3 @@ global:
     service_address_pool: "192.168.14.0/24"
 import:
   - cluster-templates/dc4/common.yaml
-include:
-  - name: vepro-secrets
-    path: daas-management/vepro-secrets
-  - name: metallb
-    path: load-balancer/metallb
-#  - name: jenkins-role
-#    path: daas-management/auth/jenkins
